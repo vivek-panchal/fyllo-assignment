@@ -4,7 +4,7 @@ import FertilizerChart from './components/FertilizerChart';
 import TopFertilizers from './components/TopFertilizers';
 import LeastAvailableFertilizers from './components/LeastAvailableFertilizers';
 import { fertilizerData } from './data/fertilizerData';
-import './style.css';
+import './style.css'
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <h1>Fertilizer Dashboard</h1>
 
       <div className="dashboard-container">
+  
         <div className="chart-container">
           <h2>Fertilizer Data Grid</h2>
           <DataGrid data={fertilizerData} />
@@ -37,4 +38,3 @@ function App() {
 }
 
 export default App;
-

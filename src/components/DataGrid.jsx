@@ -4,15 +4,16 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 
 const DataGrid = ({ data }) => {
-  const [pageSize, setPageSize] = useState(10);
+  const [pageSize, setPageSize] = useState(10); 
 
   const columns = [
-    { headerName: 'Fertilizer', field: 'name', sortable: true, filter: true, width: 150 },
-    { headerName: 'State', field: 'state', sortable: true, filter: true, width: 150 },
-    { headerName: 'Requirement', field: 'requirement', sortable: true, filter: true, width: 120 },
-    { headerName: 'Availability', field: 'availability', sortable: true, filter: true, width: 120 },
-    { headerName: 'Month', field: 'month', sortable: true, filter: true, width: 100 },
+    { headerName: 'Fertilizer', field: 'name', sortable: true, filter: true },
+    { headerName: 'State', field: 'state', sortable: true, filter: true },
+    { headerName: 'Requirement', field: 'requirement', sortable: true, filter: true },
+    { headerName: 'Availability', field: 'availability', sortable: true, filter: true },
+    { headerName: 'Month', field: 'month', sortable: true, filter: true },
   ];
+
 
   return (
     <div>
@@ -21,9 +22,8 @@ const DataGrid = ({ data }) => {
           columnDefs={columns}
           rowData={data}
           pagination={true}
-          paginationPageSize={pageSize}
-          domLayout="normal" 
-          rowHeight={50} 
+          paginationPageSize={pageSize} 
+          domLayout='autoHeight'
           onGridReady={params => {
             params.api.sizeColumnsToFit();
             window.addEventListener('resize', () => {
@@ -39,4 +39,3 @@ const DataGrid = ({ data }) => {
 };
 
 export default DataGrid;
-
