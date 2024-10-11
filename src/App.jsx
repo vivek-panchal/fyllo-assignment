@@ -4,7 +4,7 @@ import FertilizerChart from './components/FertilizerChart';
 import TopFertilizers from './components/TopFertilizers';
 import LeastAvailableFertilizers from './components/LeastAvailableFertilizers';
 import { fertilizerData } from './data/fertilizerData';
-import './index.css'
+import './style.css'
 
 function App() {
   return (
